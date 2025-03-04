@@ -59,9 +59,12 @@ def generate_text(markov_chain, length=50, seed=None, randomness=True):
 # Example usage
 if __name__ == "__main__":
     sample_text = (
-        "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do. "
-        "Once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it. "
-        "And what is the use of a book, thought Alice, without pictures or conversation?"
+        "The world is cruel, but it is also very beautiful. " 
+          " If you win, you live. If you lose, you die. If you don’t fight, you can’t win."  
+           "A person grows up when he has to. When he ceases to whine and starts doing things on his own.  "
+           "What is the point if those with the means and power do not fight?  "
+         "he only way to win is to fight. " 
+
     )
 
     markov_chain = build_markov_chain(sample_text, order=2)
@@ -69,3 +72,4 @@ if __name__ == "__main__":
     user_seed = input("Enter a starting word or phrase: ")
     generated_text = generate_text(markov_chain, length=20, seed=user_seed)
     print("\nGenerated Text:\n", generated_text)
+
